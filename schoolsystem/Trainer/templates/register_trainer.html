@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: cadetblue;
+        justify-content: center;
+
+    }
+    form:hover{
+        background-color: rgb(21, 192, 223);
+        cursor: pointer;
+    }
+    h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    form{
+        width:50% ;
+        border-radius: 2%;
+        background-color: cyan;
+        margin: 30%;
+        padding: 70px 50px 70px 0px;
+        margin-top: -0%;
+        
+
+
+    }
+    .Div{
+        text-align: center;
+        padding: 12px 36px; 
+    }
+    input[type=text], select {
+        width: 50%;
+        margin: 10%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+       
+      }
+      input{
+        width: 50%;
+        margin: 10%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      button {
+        display: inline-block;
+        padding: 15px 20px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color:  cadetblue;
+        border: none;
+        border-radius: 10px;
+      
+      }
+      
+      button:hover {background-color:rgb(45, 60, 189)}
+      
+      button:active {
+        background-color: #bda6db;
+        box-shadow: 0 5px #666;
+       
+      }
+      
+      img{
+          width: 500px;
+          height: 200px;
+      }
+</style>
+<body>
+    <h1>Trainer's Registration</h1>
+    <div class="Div">
+    <form method="POST">
+<img  src ="https://www.google.com/imgres?imgurl=https%3A%2F%2Fd1qmdf3vop2l07.cloudfront.net%2Fcan-dotterel.cloudvent.net%2Fhash-store%2F138194327577c036438d36774d26b056.png&imgrefurl=https%3A%2F%2Fakirachix.com%2Fprogrammes%2F&tbnid=2S4NZqMoNGRCBM&vet=12ahUKEwjBp4fkk5jyAhUIyRoKHZqUD6UQMygFegQIARAz..i&docid=W-bnMzDdTavAoM&w=300&h=200&q=codehive%20logo&ved=2ahUKEwjBp4fkk5jyAhUIyRoKHZqUD6UQMygFegQIARAz src="> 
+        <h1>Register</h1>
+        {{form.as_p}}
+        {% csrf_token}
+        <button>Submit</button>
+    </form>
+</div>
+</body>
+</html>

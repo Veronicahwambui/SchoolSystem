@@ -7,10 +7,95 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        body {
+          background-color: powderblue;
+          color: black;
+          font-size: 19px;
+          justify-content: center;
+          
+          
+        }
+      #item{
+        color: white;
+        text-align: center;
+
+        }
+      h1{color:black;
+       text-align: center;
+       }
+      label{
+         display: block;
+         margin-top: 16px;
+         width: 100%;
+
+
+
+
+
+        
+       }
+      form  {   
+        width: 40%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: transparent;
+        padding:10px;
+        margin-left: 30%;
+        background-color: rgb(49, 184, 218);
+        border-radius: 2%;
+      }
+      .button {    
+          background-color:rgb(18, 141, 218);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 40%;
+            font-size: 16px;
+            border-radius: 9px;
+                            }
+       .button:hover{
+         background-color:darkblue ;
+         border-radius: 4px;
+
+       }
+       input {
+        padding: 12px 60px;
+        margin: 8px 0;
+        border: transparent;
+        border-radius: 12px;
+        display: inline-block;
+       
+        
+        padding-left: 50%;
+      }
+       select {
+        width: 50%;
+        padding: 12px 50px;
+        border: none;
+        border-radius: 12px;
+        background-color: #f1f1f1; 
+        margin: 8px 0;
+        padding-left: 87%;
+      }
+      img{
+        width: 640px;
+        height: 200px;
+      }
+               
+
+    </style>
     <h1>Student Registration</h1>
     <form method="POST">
+      {% csrf_token %}
+
+      <h1 id="item">Register</h1>
         {{form.as_p}}
+    <input type="submit" value="Save" class="button" >
     </form> 
-  <button >Submit</button>
+
 </body>
 </html>
