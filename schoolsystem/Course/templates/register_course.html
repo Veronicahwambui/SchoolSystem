@@ -5,98 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<style>
-    body{
-        background-color: rgb(214, 173, 187);
-    }
-   
-        form:hover{
-            background-color: rgb(21, 192, 223);
-            cursor: pointer;
-        }
-        h1{
+    <style>
+        body{
+            background-color: rgb(192, 91, 192);
+            width: 400px;
+            height: 800px;
             font-size: 20px;
+        }
+        .head{
+            color: rgb(112,22,112);
+            font-size: 25px;
             text-align: center;
+            margin-bottom: 40px;
+            padding-top: 40px;
         }
-        form{
-            width:50% ;
-            border-radius: 2%;
-            background-color: rgb(165, 20, 146);
-            margin: 25%;
-            padding: 70px 50px 70px 0px;
-            margin-top: -0%;
-            
-    
-    
+        .sub{
+            width: 150px;
+            height: 40px;
+            margin-left: 200px;
+            background-color: rgb(112,22,112);
         }
-        .div{
-            text-align: center;
-            padding: 12px 36px; 
+        .form{
+            background-color: white;
+            margin-left: 200px;
+            width: 600px;
+            padding: 100px;
+            font-size: 20px;
+            border-radius: 20px;
+            margin-right: 200px;
         }
-        input[type=text], select {
-            width: 50%;
-            margin: 10%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-           
-          }
-          input{
-            width: 50%;
-            margin: 10%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-          }
+        input{
+            width: 100%;
+            outline: none;
+            border:1px solid ;
+            font-size: 15px;
+            padding: 8px 10px;
+            border-radius: 20px;
+            transition: all 0.3;
+            background-color: white;
+        }
+        select {
+          width: 100%;
+          padding: 12px 50px;
+          outline: none;
+          border:1px solid ;
+          border-radius: 20px;
+          background-color: #ebe7e7;
+          margin: 8px 0;
+          padding-left: 87%;
+        }
         
-    
-    input[type=text] ,select{
-        width: 50%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-      }
-    button{
-        background-color:pink;
-        border: none;
-        color: rgb(24, 4, 4);
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 10px;
-    }
-    button:hover{
-        background-color: rgb(165, 20, 146);;
-        color: whitesmoke;
-    }
-    #pic{
-      
-      width: 500px;
-       height: 200px;
-    }
-
-</style>
+    </style>
+</head>
 <body>
-    <h1>CourseRegistration</h1>
+    
     <div class="div">
-    <form method="POST">
-        <img id="pic" src="data:image/png;base64,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">
-        <h1>Register</h1>
-       {{form.as_p}}
-      <button> Submit</button>
+        <div class="form">
+            <h1 class="head">Course Registration Form</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+    {{form.as_p}}
+        <input type="submit" value="Submit" class="sub">
     </form>
-    </div>
 </body>
 </html>
