@@ -38,6 +38,9 @@
             <th>Trainer</th>
             <th>CourseCode</th>
             <th>Description</th>
+            <th>Edit</th>
+            <th>Profile</th>
+            <th>Delete</th>
            
             
 
@@ -50,6 +53,19 @@
         <td>{{course.trainer }}</td>
         <td>{{course.course_code }}</td>
         <td>{{course.description }}</td>
+
+        {% if student.images %}
+        <td><img src="{{ course.images.url }}" width="45"> </td>
+           
+            {% endif %}
+
+           <td><a  href="{%url 'edit_course' id=course.id %}">Edit</a></td>
+           <td><a  href="{%url 'course_profile' id=course.id %}">Profile</a></td>
+           <td><a  href="{%url 'delete_course' id=course.id %}">Delete</a></td>
+
+
+
+
         
     
 </tr>

@@ -1,0 +1,210 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AkiraChix Site{% endblock %}</title>
+</head>
+
+<body>
+	<style >
+		body{
+			background: url("/static/homep.jpeg") 30% 0 no-repeat fixed;
+			background-size: cover;
+		}
+		.sidenav {
+			height:100%;
+			width:160px;
+			position: fixed;
+			z-index:1;
+			top:0;
+			left:0;
+			background-color:#111;
+			position: fixed;
+			overflow-x:hidden;
+			padding-top:20px;
+		}
+ 
+		.sidenav a {
+			padding:6px 8px 6px 16px;
+			text-decoration: none;
+			font-size:25px;
+			color: #818181;
+			display:block;
+		}
+ 
+		.sidenav a:hover{
+			color:#f1f1f1;
+		}	
+ 
+		.main{
+			margin-left:160px;
+			padding: 0px 10px;
+		}
+        h1{
+            text-align: center;
+        }
+        .pic{
+			background-size: cover;
+	
+		}
+		img{
+			background-size: cover;
+			height: 600px;
+			width: 700px;
+		
+		}
+
+    .home{
+    display: flex;
+    background:   url("") no-repeat center;
+    background-color:rgb(77, 210, 219);
+    background-blend-mode: screen;
+    height: 50vh;
+    color: rgb(12, 72, 150);
+    min-height: 500px;
+    opacity: 90%;
+    background-size: 65%;
+    background-attachment: fixed;
+    font-family: 'Roboto Slab', serif; 
+}
+.home .max-width{
+  width: 100%;
+ 
+  justify-content: center;
+  align-items: center;
+}
+.home .max-width .row{
+  margin-right: 6px;
+}
+
+.home .home-content .text-2{
+ 
+    font-size: 40px;
+    font-weight: 600;
+    margin-right: -3px;
+    text-align: center;
+    padding-bottom: -70px;
+}
+.home-content{
+    text-align: center;
+}
+.student{
+             
+             background: none;
+             width: 42%;  
+             
+              font-size: 18px;  
+              font-weight: bolder;
+              padding: 10px; 
+             
+              margin: 10px 0px;   
+              border: solid 2px rgb(125, 52, 128);
+              cursor: pointer; 
+              border-radius: 10px;  
+              margin-right: 20px;
+             }
+.course{
+             
+             background: none;
+             width: 42%;  
+             
+              font-size: 18px;  
+              font-weight: bolder;
+              padding: 10px; 
+              /* padding-right: 10px;   */
+              margin: 10px 0px;   
+              border: solid 2px rgb(171, 106, 180);
+              cursor: pointer; 
+              border-radius: 10px;  
+              margin-right: 20px;
+             }
+ .trainer{
+             
+             background: none;
+             width: 42%;  
+             
+              font-size: 18px;  
+              font-weight: bolder;
+              padding: 10px; 
+              
+              margin: 10px 0px;   
+              border: solid 2px rgb(155, 96, 155);
+              cursor: pointer; 
+              border-radius: 10px;  
+              margin-right: 20px;
+             }
+.events{
+             
+             background: none;
+             width: 42%;  
+             
+              font-size: 18px;  
+              font-weight: bolder;
+              padding: 10px; 
+             
+              margin: 10px 0px;   
+              border: solid 2px rgb(217, 154, 219);
+              cursor: pointer; 
+              border-radius: 10px;  
+              margin-right: 20px;
+             }
+             button:hover {   
+              opacity: 0.7; 
+              background: white;  
+              border: solid 1px rgb(71, 158, 173);
+              color: rgb(20, 160, 153);}	
+	</style>
+
+  <h1>Welcome to school System</h1>
+
+
+    <!-- <h1>{{students}}:students</h1>
+  <h1>{{trainers}}:trainers</h1>
+  <h1>{{courses}}:courses</h1> -->
+
+
+
+	<div class="sidenav">
+		<a href="/">Home</a>
+		<a href="{%url 'student_list'%}">student</a>
+		<a href="{%url 'trainer_list'%}">Trainer</a>
+        <a href="{%url 'course_list' %}">Course</a>
+		<a href="{%url 'cal:calendar'%}"class="menu-btn">Event</a>
+
+
+	</div>
+
+
+
+
+	<section class="home" id="home">
+        
+        <div class="max-width">
+            <div class="home-content"> 
+             
+               <h2 class="text-2">AkiraChix School System</h2> 
+                    <button class="student">{{student}} Students</button>
+                    <button class="trainer">{{trainer}} Trainers</button>    
+                    <button class="course">{{course}} Courses</button>
+                    <button class="events">{{events}} Events</button>
+                    </div>
+                    
+                
+                    
+              
+            </div>
+            <div class="left">
+
+            </div>
+        </div>
+
+       
+    </section> 
+
+
+	
+</body>
+</html>

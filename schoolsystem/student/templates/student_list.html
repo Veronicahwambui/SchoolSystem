@@ -17,6 +17,8 @@
     table {
       border-collapse: collapse;
       width: 100%;
+      margin-top: 5%;
+      margin-bottom: 8%;
     }
     
     th, td {
@@ -29,9 +31,52 @@
       background-color: yellow;
       cursor: pointer;
     }
+  
+  .info {
+    border-color: purple;
+    color:purple;
+  }
+    
+  .info:hover {
+    background:purple;
+    color: white;
+  }
+  
+  .info {
+    border-color: purple;
+    color:purple;
+  }
+  
+  .info:hover {
+    background:purple;
+    color: white;
+  }
+  .clearfix {
+    margin-left: -160px;
+   
+  }
+  .btn{
+    background-color:#ffffff;
+    color:purple;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    width: 300px;
+    margin-right: 71px;
+    border: 1px solid purple;
+  }
+  a{
+      text-decoration: none;
+  }
+  
     </style>
     </head>
 <body>
+  
+  <div class="clearfix">
+  <a class=" btn-info right" href="{'% url 'register_student' %}">Add Student </a>
+</div>
+
     
     <table>
         <tr>
@@ -44,10 +89,9 @@
             <th>ClassName</th>
             <th>GuardianName</th>
             <th>Images</th>
-            <td>
-           
-
-      
+            <th>Edit</th>
+            <th>Profile</th>
+            <th>Delete</th>
         <tr>
     {% for student in students %}
     <tr>
@@ -63,11 +107,16 @@
         <td><img src="{{ student.images.url }}" width="45"> </td>
            
             {% endif %}
-    
-   
-    
+           <td><a  href="{%url 'edit_student' id=student.id %}">Edit</a></td>
+           <td><a  href="{%url 'student_profile' id=student.id %}">Profile</a></td>
+           <td><a  href="{%url 'delete_student' id=student.id %}">Delete</a></td>  
+           
+           
+           
+       
 </tr>
 {%endfor%}
 </table>
+
 </body>
 </html>

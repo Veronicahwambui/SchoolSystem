@@ -1,5 +1,6 @@
 from django import forms
-from django.shortcuts import render
+from django.forms.forms import Form
+from django.shortcuts import render,redirect
 from .forms import StudentRegistrationForm
 from .models import Student
 # Create your views here.
@@ -20,3 +21,25 @@ def student_list(request):
     return render(request,"student_list.html",{"students":students})
 
 
+def edit_student(request,id):
+    student=Student.objects.get(id=id)
+    if request.method=="POST":
+        form=StudentRegistrationForm(request.Post,instance=student)
+        if form.is_valid():
+            form.save()
+
+    else:
+        form=StudentRegistrationForm(instance=student)
+        return render(request,"edit_student.html",{"form":form})
+
+
+def student_profile(request,id):
+    student=Student.objects.get(id=id)
+    return render(request,"student_profile.html",{"student":student})
+
+
+
+def delete_student(request,id):
+    student=Student.objects.get(id=id)
+    student.delete()
+    return redirect("student_list")
