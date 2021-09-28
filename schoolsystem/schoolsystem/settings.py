@@ -143,6 +143,7 @@ MEDIA_ROOT="Images/"
 # STATIC_ROOT=os.path.join(BASE_DIR,'static/Images')
 
 STATIC_ROOT=os.path.join(BASE_DIR,'media')
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles") 
 
 
 
