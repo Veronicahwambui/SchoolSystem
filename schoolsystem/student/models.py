@@ -20,6 +20,14 @@ class Student(models.Model):
     academic_year=models.BigIntegerField(null=True,blank=True)
     images=models.ImageField(upload_to="Images/",blank=True ,null=True) 
     medical_report=models.FileField(upload_to="files/", blank=True,null=True)
+
+
+
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
+
+    def year_of_birth(self):
+        return 2021-self.age
    
   
    
