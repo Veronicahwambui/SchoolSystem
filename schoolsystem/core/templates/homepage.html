@@ -11,7 +11,8 @@
 <body>
 	<style >
 		body{
-			background: url("/static/homep.jpeg") 30% 0 no-repeat fixed;
+      background:   url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAKo6-7eFpJ_EShuhhGK-bqCC2cdf35W7QMA&usqp=CAU") no-repeat center;
+
 			background-size: cover;
 		}
 		.sidenav {
@@ -21,7 +22,7 @@
 			z-index:1;
 			top:0;
 			left:0;
-			background-color:#111;
+			background-color:rgb(153, 56, 153);
 			position: fixed;
 			overflow-x:hidden;
 			padding-top:20px;
@@ -31,7 +32,7 @@
 			padding:6px 8px 6px 16px;
 			text-decoration: none;
 			font-size:25px;
-			color: #818181;
+			color: #0a0a0a;
 			display:block;
 		}
  
@@ -56,11 +57,13 @@
 			width: 700px;
 		
 		}
-
+    .logo{
+      height: 20px;
+      width: 20px;
+    }
     .home{
     display: flex;
-    background:   url("") no-repeat center;
-    background-color:rgb(77, 210, 219);
+  
     background-blend-mode: screen;
     height: 50vh;
     color: rgb(12, 72, 150);
@@ -78,6 +81,7 @@
 }
 .home .max-width .row{
   margin-right: 6px;
+  margin-top: 30%;
 }
 
 .home .home-content .text-2{
@@ -91,16 +95,17 @@
 .home-content{
     text-align: center;
 }
+
 .student{
              
              background: none;
-             width: 42%;  
+             width: 20%;  
              
               font-size: 18px;  
               font-weight: bolder;
               padding: 10px; 
              
-              margin: 10px 0px;   
+              margin: 20px 0px;   
               border: solid 2px rgb(125, 52, 128);
               cursor: pointer; 
               border-radius: 10px;  
@@ -108,23 +113,24 @@
              }
 .course{
              
-             background: none;
-             width: 42%;  
+      background: none;
+      width: 20%;  
              
-              font-size: 18px;  
-              font-weight: bolder;
-              padding: 10px; 
+      font-size: 18px;  
+      font-weight: bolder;
+      padding: 10px; 
               /* padding-right: 10px;   */
-              margin: 10px 0px;   
-              border: solid 2px rgb(171, 106, 180);
-              cursor: pointer; 
-              border-radius: 10px;  
-              margin-right: 20px;
+      margin: 10px 0px;   
+      border: solid 2px rgb(171, 106, 180);
+      cursor: pointer; 
+      border-radius: 10px;  
+      margin-right: 20px;
+      margin-top: 30%;
              }
  .trainer{
              
              background: none;
-             width: 42%;  
+             width: 20%;  
              
               font-size: 18px;  
               font-weight: bolder;
@@ -138,8 +144,8 @@
              }
 .events{
              
-             background: none;
-             width: 42%;  
+               
+             width: 20%;  
              
               font-size: 18px;  
               font-weight: bolder;
@@ -149,7 +155,7 @@
               border: solid 2px rgb(217, 154, 219);
               cursor: pointer; 
               border-radius: 10px;  
-              margin-right: 20px;
+              margin-right: 30px;
              }
              button:hover {   
               opacity: 0.7; 
@@ -166,12 +172,16 @@
   <h1>{{courses}}:courses</h1> -->
 
 
-
+  <!-- <div class="logo">
+    <img src="https://www.segalfamilyfoundation.org/wp-content/uploads/2016/06/AkiraChix-Logo-2.png">
+   </div> -->
 	<div class="sidenav">
+  
+
 		<a href="/">Home</a>
 		<a href="{%url 'student_list'%}">student</a>
 		<a href="{%url 'trainer_list'%}">Trainer</a>
-        <a href="{%url 'course_list' %}">Course</a>
+      <a href="{%url 'course_list' %}">Course</a>
 		<a href="{%url 'cal:calendar'%}"class="menu-btn">Event</a>
 
 
