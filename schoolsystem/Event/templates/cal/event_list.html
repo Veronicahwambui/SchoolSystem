@@ -24,6 +24,40 @@
 
 
 
+  <h1 id="form-title">EVENTS</h1>
+  
+      <thead class="table">
+          <tr>
+              <th>Name</th>
+              <th>Date</th>
+              <th>Event Description</th>
+              <th >Start Time</th>
+              <th >End Time</th>
+              <th >Event Link</th>
+
+          </tr>
+      </thead>
+
+      {% for event in events %}
+      <tr>
+          <td>{{event.name}}</td>
+          <td>{{event.date}}</td>
+          <td>{{event.event_description}}</td>
+          <td>{{event.time_start}}</td>
+          <td>{{event.end_time}}</td>
+          <td>{{event.event_link}}</td>
+
+      </tr>
+      {% endfor %}
+  </table>
+
+
+
+
+
+
+
+
 </body>
 </html>
 

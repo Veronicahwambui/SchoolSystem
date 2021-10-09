@@ -70,8 +70,8 @@ def register_event(request):
             print(form.errors)   
     else:
         form=EventRegistrationForm()
-    return render(request,"register_event.html",{"form":form})    
+    return render(request,"cal/register_event.html",{"form":form})    
 
 def event_list(request):
     events=Event.objects.all()
-    return render(request,"event_list.html",{"events":events})
+    return render(request,"cal/event_list.html",{"events":events})
