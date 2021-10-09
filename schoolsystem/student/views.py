@@ -24,13 +24,13 @@ def student_list(request):
 def edit_student(request,id):
     student=Student.objects.get(id=id)
     if request.method=="POST":
-        form=StudentRegistrationForm(request.Post,instance=student)
+        form=StudentRegistrationForm(request.POST,instance=student)
         if form.is_valid():
             form.save()
 
     else:
         form=StudentRegistrationForm(instance=student)
-        return render(request,"edit_student.html",{"form":form})
+    return render(request,"edit_student.html",{"form":form})
 
 
 def student_profile(request,id):
