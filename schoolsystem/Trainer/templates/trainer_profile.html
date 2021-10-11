@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: cadetblue;
+    }
+   
+      
+    .profile{
+      
+        text-align: center;
+        max-width: 250px;
+        box-shadow: 0 0 10px rgba(0,0,0.2);
+        padding: 20px;
+        background-color: whitesmoke;
+        align-items: center;
+        justify-content: center;
+        margin-left: 40%;
+        margin-top: 50px;
+        border-radius: 5%;
+        transition: 0.3s;
+       
+        }
+        .profile img{
+            padding-top: 10px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+        }
+        h2{
+            font-size: 25px;
+        }
+        .profile:hover{
+         background-color: violet;
+         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+</style>
+<body>
+ 
+ 
+    <div class="profile" >
+    <img src="{{ trainer.image.url }}"/>
+    
+    <div class="profile_name">
+    <p>FirstName:{{trainer.first_name}}</p>
+    <p> LastName:{{trainer.last_name}}</p>
+    <p>Company:{{trainer.company}}</p>
+    
+
+    </div>
+    </div>
+  
+    
+</body>
+</html>
