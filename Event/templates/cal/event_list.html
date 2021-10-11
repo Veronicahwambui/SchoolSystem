@@ -1,0 +1,115 @@
+{% extends 'cal/base.html' %}
+
+
+{% block content %}
+<div class="clearfix">
+  <a class="btn info" href="{% url 'cal:calendar' %}"> Calendar </a>
+</div>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+{{ calendar }}
+{% endblock %}
+
+
+
+  <h1 id="form-title">EVENTS</h1>
+  
+      <thead class="table">
+          <tr>
+              <th>Name</th>
+              <th>Date</th>
+              <th>Event Description</th>
+              <th >Start Time</th>
+              <th >End Time</th>
+              <th >Event Link</th>
+
+          </tr>
+      </thead>
+
+      {% for event in events %}
+      <tr>
+          <td>{{event.name}}</td>
+          <td>{{event.date}}</td>
+          <td>{{event.event_description}}</td>
+          <td>{{event.time_start}}</td>
+          <td>{{event.end_time}}</td>
+          <td>{{event.event_link}}</td>
+
+      </tr>
+      {% endfor %}
+  </table>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

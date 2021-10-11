@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    table, td, th {  
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      padding: 15px;
+    }
+    th{
+      background-color:rgb(0, 128, 117);
+    }
+    tr:hover{
+        background-color: indigo;
+    }
+    </style>
+    </head>
+<body>
+    
+    <table>
+        <tr>
+            <th>CourseName</th>
+            <th>Trainer</th>
+            <th>CourseCode</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+           
+            
+
+
+    
+        <tr>
+    {% for course in courses %}
+    <tr>
+        <td>{{course.course_name}}</td> 
+        <td>{{course.trainer }}</td>
+        <td>{{course.course_code }}</td>
+        <td>{{course.description }}</td>
+
+        {% if student.images %}
+        <td><img src="{{ course.images.url }}" width="45"> </td>
+           
+            {% endif %}
+
+           <td><a  href="{%url 'edit_course' id=course.id %}">Edit</a></td>
+           <td><a  href="{%url 'delete_course' id=course.id %}">Delete</a></td>
+
+
+
+
+        
+    
+</tr>
+{%endfor%}
+</table>
+</body>
+</html>

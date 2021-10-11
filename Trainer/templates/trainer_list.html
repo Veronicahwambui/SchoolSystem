@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  table,
+  td,
+  th {
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 8%;
+    margin-top: 5%;
+  }
+
+  th,
+  td {
+    padding: 15px;
+  }
+
+  th {
+    background-color: rgb(0, 81, 128);
+  }
+
+  tr:hover {
+    background-color: lawngreen;
+  }
+  .info {
+    border-color: purple;
+    color:purple;
+  }
+    
+  .info:hover {
+    background:purple;
+    color: white;
+  }
+  
+  .info {
+    border-color: purple;
+    color:purple;
+  }
+  
+  .info:hover {
+    background:purple;
+    color: white;
+  }
+  .clearfix {
+    margin-left: 10px;
+   
+  }
+  .btn-info {
+    background-color:#4b30c2;
+    color:rgb(29, 27, 29);
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    width: 300px;
+    margin-right: 4px;
+    border: 1px solid purple;
+  }
+  a{
+      text-decoration: none;
+  }
+
+
+
+</style>
+</head>
+
+<body>
+
+  
+  
+
+  <table>
+    <tr>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>PhoneNumber</th>
+      <th>Company</th>
+      <th>Gender</th>
+      <th>Image</th>
+      <th>Edit</th>
+      <th>Profile</th>
+      <th>Delete</th>
+
+
+
+    <tr>
+      {%for trainer in trainers %}
+    <tr>
+      <td>{{trainer.first_name}}</td>
+      <td>{{trainer.last_name }}</td>
+      <td>{{trainer.phone_number}}</td>
+      <td>{{trainer.company }}</td>
+      <td>{{trainer.gender}}</td>
+      {% if trainer.image %}
+      <td><img src="{{ trainer.image.url }}" width="45"> </td>
+
+      {% endif %}
+
+      <td><a href="{%url 'edit_trainer' id=trainer.id %}">Edit</a></td>
+      <td><a href="{%url 'trainer_profile' id=trainer.id %}">Profile</a></td>
+      <td><a href="{%url 'delete_trainer' id=trainer.id %}">Delete</a></td>
+
+
+    </tr>
+    {%endfor%}
+  </table>
+</body>
+
+</html>
